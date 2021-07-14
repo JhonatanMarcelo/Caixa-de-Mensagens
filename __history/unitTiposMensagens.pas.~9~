@@ -1,0 +1,68 @@
+unit unitTiposMensagens;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm4 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Button5: TButton;
+    Button6: TButton;
+    Button7: TButton;
+    Button8: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm4.Button1Click(Sender: TObject);
+begin
+   ShowMessage('Teste de Menssagem');
+end;
+
+procedure TForm4.Button2Click(Sender: TObject);
+begin
+  Application.MessageBox('Teste de Mensagem','Atençao',MB_ICONEXCLAMATION+MB_OK);
+end;
+
+procedure TForm4.Button3Click(Sender: TObject);
+begin
+  Application.MessageBox('Teste de Mensagem','Informaçao', MB_ICONINFORMATION+MB_OK);
+end;
+
+procedure TForm4.Button4Click(Sender: TObject);
+begin
+  Application.MessageBox('Teste Mensagem','Erro', MB_ICONERROR+MB_OK);
+end;
+
+procedure TForm4.Button5Click(Sender: TObject);
+begin
+  Application.MessageBox('Teste de Mensagem', 'Pergunta', MB_ICONQUESTION+MB_OK);
+end;
+
+procedure TForm4.Button6Click(Sender: TObject);
+begin
+  Application.MessageBox('Texto de Mansagem','Titulo', MB_ICONQUESTION+MB_OK);
+end;
+
+end.
